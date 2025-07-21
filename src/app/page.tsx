@@ -55,12 +55,39 @@ export default function HomePage() {
           </Card>
         </div>
 
-        <div className="text-center">
+        <div className="text-center space-y-6">
           <Link href="/juego">
             <Button size="lg" className="bg-white text-black hover:bg-gray-200 text-xl px-8 py-4">
-              COMENZAR JUEGO
+              COMENZAR JUEGO PRINCIPAL
             </Button>
           </Link>
+          
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4 text-white">🎮 Mini Juegos</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link href="/snake">
+                <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors cursor-pointer">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-green-400 text-lg">🐍 Snake Game</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm">Clásico juego de la serpiente con controles modernos</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              
+              <Link href="/2048">
+                <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors cursor-pointer">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-purple-400 text-lg">🎯 2048</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-sm">Combina números para llegar a 2048</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 text-center text-gray-400">
